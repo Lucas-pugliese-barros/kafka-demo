@@ -4,8 +4,8 @@
 
 This project demonstrates implementation of **Apache Kafka** using **Java** and **Spring Boot**. It consists of two separate applications:
 
-1. **Kafka Producer**: A RESTful application that accepts JSON messages via an API endpoint and publishes them to a Kafka topic called `topic-messages`.
-2. **Kafka Consumer**: An application that read data from the `topic-messages` topic.
+- **Producer**: Accept JSON messages via an API endpoint and publishes them to a Kafka topic called `topic-messages`.
+- **Consumer**: An application that read data from the `topic-messages` topic.
 
 ---
 
@@ -50,7 +50,7 @@ curl -X POST http://localhost:8081/api/messages \
 
 --- 
 
-### That project is an improvement of the simple-kafka-demo[https://github.com/Lucas-pugliese-barros/simple-kafka-demo]. For example:
+### That project is an improvement of the [simple-kafka-demo](https://github.com/Lucas-pugliese-barros/simple-kafka-demo) with the following feature below.
 
 ```
 Multiple partitions for parallelism.
