@@ -1,4 +1,4 @@
-# Simple Kafka Messaging Project
+# Kafka Messaging Project
 
 ## Overview
 
