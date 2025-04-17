@@ -7,6 +7,7 @@ This project demonstrates implementation of **Apache Kafka** using **Java** and 
 - **Producer**: Accept JSON messages via an API endpoint and publishes them to a Kafka topic called `topic-messages`.
 - **Consumer**: An application that read data from the `topic-messages` topic.
 
+OBS: The idea of that project is also doesn't use Zookeeper since in the future versions of Kafka it will replaced for the KRaft
 ---
 
 ## Prerequisites
