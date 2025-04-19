@@ -1,6 +1,7 @@
 package com.example.kafka.producer.controller;
 
 import com.example.kafka.producer.dto.MessageDTO;
+import com.example.kafka.producer.dto.MessageType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,7 +37,7 @@ class MessageControllerIT {
 
     @Test
     void testSendMessage_PublishesToKafka() throws InterruptedException {
-        MessageDTO message = new MessageDTO("id", "content");
+        MessageDTO message = new MessageDTO("id", "content",  MessageType.ACCOUNT_OPENED);
         HttpHeaders headers = new HttpHeaders();
         headers.set("Content-Type", "application/json");
         HttpEntity<MessageDTO> request = new HttpEntity<>(message, headers);
