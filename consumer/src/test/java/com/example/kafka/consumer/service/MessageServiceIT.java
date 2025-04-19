@@ -4,6 +4,7 @@ import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.read.ListAppender;
 import com.example.kafka.consumer.dto.MessageDTO;
+import com.example.kafka.consumer.dto.MessageType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -52,7 +53,7 @@ class MessageServiceIT {
 
     @Test
     void testReadMessages_ConsumesFromKafka() throws InterruptedException {
-        MessageDTO message = new MessageDTO("test-id", "test-content");
+        MessageDTO message = new MessageDTO("test-id", "test-content", MessageType.ACCESS_GRANTED);
 
         kafkaTemplate.send("topic-messages", message.id(), message);
         kafkaTemplate.flush();

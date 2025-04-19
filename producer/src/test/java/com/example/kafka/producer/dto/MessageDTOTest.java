@@ -8,7 +8,7 @@ public class MessageDTOTest {
 
     @Test
     public void validateIdField() {
-        MessageDTO messageDTO = new MessageDTO("id", null);
+        MessageDTO messageDTO = new MessageDTO("id", null, MessageType.ACCESS_GRANTED);
 
         assertThat(messageDTO.id()).isNotBlank();
         assertThat(messageDTO.content()).isNull();
@@ -16,7 +16,7 @@ public class MessageDTOTest {
 
     @Test
     public void validateContentField() {
-        MessageDTO messageDTO = new MessageDTO(null, "content");
+        MessageDTO messageDTO = new MessageDTO(null, "content", MessageType.ACCESS_GRANTED);
 
         assertThat(messageDTO.id()).isNull();
         assertThat(messageDTO.content()).isNotBlank();
@@ -24,7 +24,7 @@ public class MessageDTOTest {
 
     @Test
     public void validateIdAndContentField() {
-        MessageDTO messageDTO = new MessageDTO("id", "content");
+        MessageDTO messageDTO = new MessageDTO("id", "content", MessageType.ACCESS_GRANTED);
 
         assertThat(messageDTO.id()).isEqualTo("id");
         assertThat(messageDTO.id()).isNotBlank();
